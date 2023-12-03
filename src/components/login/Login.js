@@ -1,5 +1,5 @@
 import React from "react";
-import "../../App.css";
+import "./Login.scss";
 import { Link } from "react-router-dom";
 import loginVideo from "../../assets/consulting_vid1.mp4";
 import logo from "../../assets/logo.png";
@@ -57,7 +57,7 @@ const Login = () => {
 
             <span className="forgotPassword">
               {" "}
-              <a href="#">Forgot Password?</a>{" "}
+              <a href="##">Forgot Password?</a>{" "}
             </span>
           </form>
         </div>
