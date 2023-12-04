@@ -1,4 +1,5 @@
-.loginPage {
+.loginPage,
+.registerPage {
   height: 100vh;
   width: 100%;
   margin: auto;
@@ -179,6 +180,18 @@
           text-decoration: underline;
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 927px) {
+  .loginPage,
+  .registerPage {
+    .container {
+      flex-direction: column;
+    }
+    .videoContainer {
+      width: 100%;
     }
   }
 }
