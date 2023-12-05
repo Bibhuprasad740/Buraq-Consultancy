@@ -1,22 +1,16 @@
-import React from "react";
-import "./Dashboard.css";
-import { signOut } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
-import auth from "../../backend/auth";
+import Home from "../../pages/home/Home";
+import "../../style/dark.scss";
+import { useContext } from "react";
+import { DarkModeContext } from "../../context/darkModeContext";
 
-const Dashboard = () => {
-  const navigator = useNavigate();
-  function logoutHandler() {
-    signOut(auth);
-    navigator("/");
-  }
+function Dashboard() {
+  const { darkMode } = useContext(DarkModeContext);
+
   return (
-    <div>
-      This is Dashboard
-      <br />
-      <button onClick={logoutHandler}>Logout</button>
+    <div className={darkMode ? "app dark" : "app"}>
+      <Home />
     </div>
   );
-};
+}
 
 export default Dashboard;
